@@ -3,7 +3,7 @@
 NodeJS Express Project Showcasing login and signup features, validation using Joi, and JWT for authentication of routes.
 
 
-# Project Structure
+## Project Structure
 ```.
 ├── index.js
 ├── middlewares
@@ -18,12 +18,14 @@ NodeJS Express Project Showcasing login and signup features, validation using Jo
     └── verifyToken.js
 ```
 
-# For running the project
+## For running the project
+
+### Using yarn 
 ```
 yarn install 
 yarn start
 ```
-### If you use npm
+### Using npm
 
 ```
 npm install 
