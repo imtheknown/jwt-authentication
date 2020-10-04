@@ -31,3 +31,29 @@ yarn start
 npm install 
 npm start
 ```
+
+### Routes 
+
+  /api/v1/user/register
+
+    Payload:
+    ```
+    {
+    "name":"Your Name",
+    "email": "youremail@yourmail.com",
+    "password":"yourpassword"
+    }
+    ```
+ /api/v1/user/login
+
+    Payload:
+    ```
+    {
+    "email": "youremail@yourmail.com",
+    "password":"yourpassword"
+    }
+    ```
+ /api/v1/posts
+    ```Get Request, with auth-token in header```
+   
+   
