@@ -22,9 +22,11 @@ app.use(express.json());
 
 //Importing the router 
 const authRoutes = require('./routes/auth');
+const postsRoutes = require('./routes/posts');
 
 //Using the auth middleware
 app.use('/api/v1/user', authRoutes)
+app.use('/api/v1/posts', postsRoutes)
 
 
 
