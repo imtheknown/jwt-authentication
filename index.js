@@ -1,11 +1,32 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const app = express();
+
+// Mongoose Connection
+const mongooseConfig = {
+    autoIndex: false,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+};
+//Connecting to Database
+mongoose.connect(process.env.MONGO_URI, mongooseConfig, () => {
+    console.log('Connected To DB');
+});
+//End Mongoose Connection
+
+app.use(express.json());
 
 //Importing the router 
 const authRoutes = require('./routes/auth');
 
 //Using the auth middleware
-app.use('/api/v1/users',authRoutes)
+app.use('/api/v1/user', authRoutes)
 
-app.listen(3000, () => console.log('Listening in Port 3000...'));
+
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Listening in Port ${PORT}...`));
