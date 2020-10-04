@@ -6,15 +6,17 @@ dotenv.config();
 
 const app = express();
 
+// Mongoose Connection
 const mongooseConfig = {
-        autoIndex: false,
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
+    autoIndex: false,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 };
 //Connecting to Database
-mongoose.connect(process.env.MONGO_URI,mongooseConfig,()=>{
+mongoose.connect(process.env.MONGO_URI, mongooseConfig, () => {
     console.log('Connected To DB');
 });
+//End Mongoose Connection
 
 app.use(express.json());
 
@@ -22,7 +24,7 @@ app.use(express.json());
 const authRoutes = require('./routes/auth');
 
 //Using the auth middleware
-app.use('/api/v1/user',authRoutes)
+app.use('/api/v1/user', authRoutes)
 
 
 
