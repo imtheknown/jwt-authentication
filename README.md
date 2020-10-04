@@ -18,12 +18,12 @@ NodeJS Express Project Showcasing login and signup features, validation using Jo
     └── verifyToken.js
 ```
 
-#For running the project
+# For running the project
 ```
 yarn install 
 yarn start
 ```
-###If you use npm
+### If you use npm
 
 ```
 npm install 
